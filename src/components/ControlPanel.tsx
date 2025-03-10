@@ -2,7 +2,9 @@ import { useRef, useState } from 'react';
 import { useFrame } from '@react-three/fiber';
 import { Mesh } from 'three';
 
-const ControlPanel = (props) => {
+import { ThreeElements } from '@react-three/fiber';
+
+const ControlPanel = (props: ThreeElements['group']) => {
   const panelRef = useRef<Mesh>(null);
   const antennaRef = useRef<Mesh>(null);
   const [buttonActive, setButtonActive] = useState(false);
